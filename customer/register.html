@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>紫金港大酒店客户注册</title>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:204px;
+	top:58px;
+	width:512px;
+	height:398px;
+	z-index:1;
+}
+#Layer2 {
+	position:absolute;
+	left:361px;
+	top:4px;
+	width:143px;
+	height:24px;
+	z-index:2;
+}
+#Layer3 {
+	position:absolute;
+	left:391px;
+	top:3px;
+	width:0px;
+	height:12px;
+	z-index:2;
+}
+#Layer4 {
+	position:absolute;
+	left:366px;
+	top:6px;
+	width:227px;
+	height:45px;
+	z-index:3;
+}
+.STYLE1 {
+	font-size: 36px;
+	color: #FF0000;
+}
+.STYLE2 {font-size: 18px}
+body {
+	background-image: url(../images/3d786735b03c942a91ef395c.jpg);
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+</script>
+</head>
+
+<body>
+<div id="Layer1">
+  <form action="register.php" method="post" name="form1" id="form1" onsubmit="MM_validateForm('name','','R','sex','','R','ID','','R','psw','','R','age','','R','phonenum','','R');return document.MM_returnValue">
+    <table width="534" height="252" border="1">
+      <tr>
+        <td width="75" height="73"><span class="STYLE2">姓名</span></td>
+        <td width="168"><label>
+          <input name="name" type="text" id="name" />
+        </label></td>
+        <td width="77">性别</td>
+        <td width="186"><label>
+        <select name="sex" id="sex">
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+        </label></td>
+      </tr>
+      <tr>
+        <td height="84">身份证号</td>
+        <td><label>
+          <input name="ID" type="text" id="ID" />
+        </label></td>
+        <td>密码</td>
+        <td><label>
+          <input name="psw" type="text" id="psw" />
+        </label></td>
+      </tr>
+      <tr>
+        <td height="85">年龄</td>
+        <td><label>
+          <input name="age" type="text" id="age" />
+        </label></td>
+        <td><span class="STYLE2">联系电话</span></td>
+        <td><label>
+          <input name="phonenum" type="text" id="phonenum" />
+        </label></td>
+      </tr>
+    </table>
+    <table width="535" height="130" border="1">
+      <tr>
+        <td><label></label>
+          <label>
+          <input type="submit" name="Submit" value="提交" />
+        </label>
+          <label>
+          <input type="reset" name="Submit2" value="重置" />
+        </label></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div class="STYLE1" id="Layer4">客户注册</div>
+</body>
+</html>
